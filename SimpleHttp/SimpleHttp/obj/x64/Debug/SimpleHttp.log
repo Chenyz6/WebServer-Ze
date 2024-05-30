@@ -4,30 +4,23 @@
   正在验证体系结构
   正在启动远程生成
   正在编译源:
-  main.c
-E:\Desktop\WebServer-Ze\SimpleHttp\SimpleHttp\main.c(10,27): warning : implicit declaration of function ‘atoi’ [-Wimplicit-function-declaration]
-E:\Desktop\WebServer-Ze\SimpleHttp\SimpleHttp\main.c(10,27): warning :    10 |     unsigned short port = atoi(argv[1]);
-E:\Desktop\WebServer-Ze\SimpleHttp\SimpleHttp\main.c(10,27): warning :       |                           ^~~~
-E:\Desktop\WebServer-Ze\SimpleHttp\SimpleHttp\main.c(10,27): warning : conversion from ‘int’ to ‘short unsigned int’ may change value [-Wconversion]
-E:\Desktop\WebServer-Ze\SimpleHttp\SimpleHttp\main.c(11,5): warning : implicit declaration of function ‘chdir’ [-Wimplicit-function-declaration]
-E:\Desktop\WebServer-Ze\SimpleHttp\SimpleHttp\main.c(11,5): warning :    11 |     chdir(argv[2]); // change directory
-E:\Desktop\WebServer-Ze\SimpleHttp\SimpleHttp\main.c(11,5): warning :       |     ^~~~~
-E:\Desktop\WebServer-Ze\SimpleHttp\SimpleHttp\main.c(13,14): warning : implicit declaration of function ‘initListenFd’ [-Wimplicit-function-declaration]
-E:\Desktop\WebServer-Ze\SimpleHttp\SimpleHttp\main.c(13,14): warning :    13 |     int fd = initListenFd(port);
-E:\Desktop\WebServer-Ze\SimpleHttp\SimpleHttp\main.c(13,14): warning :       |              ^~~~~~~~~~~~
-E:\Desktop\WebServer-Ze\SimpleHttp\SimpleHttp\main.c(13,9): warning : unused variable ‘fd’ [-Wunused-variable]
-E:\Desktop\WebServer-Ze\SimpleHttp\SimpleHttp\main.c(13,9): warning :    13 |     int fd = initListenFd(port);
-E:\Desktop\WebServer-Ze\SimpleHttp\SimpleHttp\main.c(13,9): warning :       |         ^~
   Server.c
-E:\Desktop\WebServer-Ze\SimpleHttp\SimpleHttp\Server.c(98,24): warning : conversion from ‘ssize_t’ {aka ‘long int’} to ‘int’ may change value [-Wconversion]
-E:\Desktop\WebServer-Ze\SimpleHttp\SimpleHttp\Server.c(98,24): warning :    98 |         while ( (len = recv(cfd, buf, sizeof(buf), 0)) > 0)
-E:\Desktop\WebServer-Ze\SimpleHttp\SimpleHttp\Server.c(98,24): warning :       |                        ^~~~
-E:\Desktop\WebServer-Ze\SimpleHttp\SimpleHttp\Server.c(101,52): warning : conversion to ‘size_t’ {aka ‘long unsigned int’} from ‘int’ may change the sign of the result [-Wsign-conversion]
-E:\Desktop\WebServer-Ze\SimpleHttp\SimpleHttp\Server.c(101,52): warning :   101 |                         memcpy(buf + offset, temp, len);
-E:\Desktop\WebServer-Ze\SimpleHttp\SimpleHttp\Server.c(101,52): warning :       |                                                    ^~~
-E:\Desktop\WebServer-Ze\SimpleHttp\SimpleHttp\Server.c(114,17): warning : implicit declaration of function ‘close’; did you mean ‘fclose’? [-Wimplicit-function-declaration]
-E:\Desktop\WebServer-Ze\SimpleHttp\SimpleHttp\Server.c(114,17): warning :   114 |                 close(cfd);
-E:\Desktop\WebServer-Ze\SimpleHttp\SimpleHttp\Server.c(114,17): warning :       |                 ^~~~~
-E:\Desktop\WebServer-Ze\SimpleHttp\SimpleHttp\Server.c(114,17): warning :       |                 fclose
+E:\Desktop\WebServer-Ze\SimpleHttp\SimpleHttp\Server.c(107,24): warning : conversion from ‘ssize_t’ {aka ‘long int’} to ‘int’ may change value [-Wconversion]
+E:\Desktop\WebServer-Ze\SimpleHttp\SimpleHttp\Server.c(110,52): warning : conversion to ‘size_t’ {aka ‘long unsigned int’} from ‘int’ may change the sign of the result [-Wsign-conversion]
+E:\Desktop\WebServer-Ze\SimpleHttp\SimpleHttp\Server.c(110,52): warning :   110 |                         memcpy(buf + offset, temp, len);
+E:\Desktop\WebServer-Ze\SimpleHttp\SimpleHttp\Server.c(110,52): warning :       |                                                    ^~~
+E:\Desktop\WebServer-Ze\SimpleHttp\SimpleHttp\Server.c(119,30): warning : conversion from ‘long int’ to ‘int’ may change value [-Wconversion]
+E:\Desktop\WebServer-Ze\SimpleHttp\SimpleHttp\Server.c(119,30): warning :   119 |                 int reqLen = pt - buf;
+E:\Desktop\WebServer-Ze\SimpleHttp\SimpleHttp\Server.c(119,30): warning :       |                              ^~
+E:\Desktop\WebServer-Ze\SimpleHttp\SimpleHttp\Server.c(272,66): warning : conversion from ‘__off_t’ {aka ‘long int’} to ‘int’ may change value [-Wconversion]
+E:\Desktop\WebServer-Ze\SimpleHttp\SimpleHttp\Server.c(288,20): warning : conversion from ‘__off_t’ {aka ‘long int’} to ‘int’ may change value [-Wconversion]
+E:\Desktop\WebServer-Ze\SimpleHttp\SimpleHttp\Server.c(288,20): warning :   288 |         int size = lseek(fd, 0, SEEK_END);
+E:\Desktop\WebServer-Ze\SimpleHttp\SimpleHttp\Server.c(288,20): warning :       |                    ^~~~~
+E:\Desktop\WebServer-Ze\SimpleHttp\SimpleHttp\Server.c(292,54): warning : conversion to ‘size_t’ {aka ‘long unsigned int’} from ‘int’ may change the sign of the result [-Wsign-conversion]
+E:\Desktop\WebServer-Ze\SimpleHttp\SimpleHttp\Server.c(292,54): warning :   292 |                 int ret = sendfile(cfd, fd, &offset, size);     // #include <sys/sendfile.h>    sendfile --> 0 copy
+E:\Desktop\WebServer-Ze\SimpleHttp\SimpleHttp\Server.c(292,54): warning :       |                                                      ^~~~
+E:\Desktop\WebServer-Ze\SimpleHttp\SimpleHttp\Server.c(292,27): warning : conversion from ‘ssize_t’ {aka ‘long int’} to ‘int’ may change value [-Wconversion]
+E:\Desktop\WebServer-Ze\SimpleHttp\SimpleHttp\Server.c(292,27): warning :   292 |                 int ret = sendfile(cfd, fd, &offset, size);     // #include <sys/sendfile.h>    sendfile --> 0 copy
+E:\Desktop\WebServer-Ze\SimpleHttp\SimpleHttp\Server.c(292,27): warning :       |                           ^~~~~~~~
   正在链接对象
   SimpleHttp.vcxproj -> E:\Desktop\WebServer-Ze\SimpleHttp\SimpleHttp\bin\x64\Debug\SimpleHttp.out
